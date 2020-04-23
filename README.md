@@ -26,4 +26,4 @@ The graph below shows the variable importance based on the random forest model t
 
 Given the variable importance, I choose a subset of column that are more important to the model. I then run the model on this subset of features which further improves the recall , precision and accuracy of the model, which is shown in the table below. 
 
-![ThirdTable](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table 4.PNG)
+![ThirdTable](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table4.PNG)
