@@ -13,17 +13,17 @@ The data comes from the UCI Machine Learning Repository Cleveland dataset. The d
 ## Modeling
 I use the random forest and gradient boosting to classify heart disease patients. For the initial models, with 5 fold cross-validation, the accuracy of both the models were around 0.79 compared to 0.55 of the dummy classifier. However, the random forest model performed better in precision and accuracy but the gradient boosting performed better in recall, so I’ll tune hyper parameters for both the models. The table below shows the various scores for the models.
 
-![FirstTable] (https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table1.PNG)
+![FirstTable](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table1.PNG)
 
 I first use the RandomSearchCV to narrow down the search of the hyperparameters so that I can fine tune them using the GridSearchCV.  Here, it is clear that the random forest does a much better job as it scores consistently higher across all evaluation metrics. The recall increases by about 9 percent compared to the initial random forest model. The table below shows the scores for the models.
 
-![SecondTable] (https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table3.PNG)
+![SecondTable](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table3.PNG)
 
 ### Wrapper Feature Selection
 The graph below shows the variable importance based on the random forest model that maximizes recall. 
 
-![ImpFeatures] (https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Figure.PNG)
+![ImpFeatures](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Figure.PNG)
 
 Given the variable importance, I choose a subset of column that are more important to the model. I then run the model on this subset of features which further improves the recall , precision and accuracy of the model, which is shown in the table below. 
 
-![ThirdTable] (https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table4.PNG)
+![ThirdTable](https://github.com/sharmas412/Heart-Disease-Classification/blob/master/images/Table4.PNG)
